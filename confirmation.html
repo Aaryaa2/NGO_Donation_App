@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Success</title>
+  <style>
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: #F0F4F1;
+      margin: 0;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #ff512f, #dd2476);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .logo {
+        width: 200px;
+        height: 150px;
+    }
+
+    .steps {
+      display: flex;
+      justify-content: center;
+      margin: 20px;
+      gap: 40px;
+    }
+
+    .step {
+      text-align: center;
+      font-weight: bold;
+      color: gray;
+    }
+
+    .step.active {
+      color: #2E8B60;
+    }
+
+    .card {
+      background: white;
+      width: 400px;
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .success {
+      font-size: 50px;
+      color: green;
+    }
+
+    button {
+      padding: 12px 20px;
+      background: #2E8B60;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #1B6B45;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="header">
+  <div class="header-content">
+    
+    <img src="{{ url_for('static', filename='images/logo.png') }}" class="logo">
+
+    <div class="header-text">
+      <h1>A Ray of Hope Charitable Trust</h1>
+      <p>Donation Successful</p>
+    </div>
+
+  </div>
+</div>
+
+<div class="steps">
+  <div class="step">1 Details</div>
+  <div class="step">2 Payment</div>
+  <div class="step active">3 Done</div>
+</div>
+
+<div class="card">
+  <div class="success">✔</div>
+
+  <h2>Thank You!❤️</h2>
+  <p>Your donation has been received successfully.</p>
+
+  <button onclick="goHome()">Donate Again</button>
+</div>
+
+<script>
+function goHome() {
+  window.location.href = "/";
+}
+</script>
+
+</body>
+</html>
