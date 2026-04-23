@@ -52,7 +52,7 @@ def submit_donation():
     ])
     except Exception as e:
         print("ERROR:", e)
-    return {"error": str(e)}, 500
+        return {"error": str(e)}, 500
     print("Saved to Google Sheets:", data)
 
     return jsonify({
